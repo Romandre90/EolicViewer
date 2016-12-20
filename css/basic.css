@@ -1,0 +1,234 @@
+body {
+    background-color: #ededed;
+}
+
+h1 {
+	color: black;
+	font-family: verdana;
+	font-size: 40px;
+}
+
+h2 {
+	color: black;
+	font-family: verdana;
+	font-size: 20px;
+}
+
+div.markup {
+width:400px;
+heigt:200px;
+border:1px solid red;
+}
+
+.title_container {
+	overflow: hidden;
+	float: left;
+}
+
+.container {
+	overflow: hidden;
+}
+
+.header {
+	overflow: hidden;
+}
+
+.logo {
+	float: left;
+	margin: 5px 30px 5px 10px;
+}
+
+.conn_icon {
+	display: inline-block;
+	width: 92px;
+	height: 92px;
+	margin: 5px 5px 5px 5px;
+}
+
+.wind_dir {
+	width: 190px;
+	height: 190px;
+	background-image: url(../img/compass.png);
+	background-repeat: no-repeat;
+}
+
+.switch {
+	display: inline-block;
+	width: 92px;
+	height: 108px;
+	margin: 5px 10px 5px 10px;
+	background-position:center center;
+	background-repeat: no-repeat;
+}
+
+.switch_label_box {
+	display: table-cell;
+	width: 92px;
+	height: 45px;
+	text-align: center;
+	vertical-align: middle;
+}
+	
+
+.switch_label {
+	display: inline-block;
+	font-family: verdana;
+    font-size: 12px;
+	line-height: 14px;
+}
+
+.display_box {
+	width: 178px;
+	height: 85px;
+	margin: 5px 5px 5px 5px;
+	background-image: url(../img/label_display.png);
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
+.display_edit_box {
+	width: 178px;
+	height: 145px;
+	margin: 5px 5px 5px 5px;
+	background-image: url(../img/label_display_edit.png);
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
+.display_label_box {
+	display: table-cell;
+	width: 178px;
+	height: 43px;
+	text-align: center;
+	vertical-align: middle;
+}
+	
+.display_label{
+	display: inline-block;
+	font-family: verdana;
+    font-size: 12px;
+	line-height: 14px;
+}
+
+.display_value_box {
+	display: table-cell;
+	width: 178px;
+	height: 40px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.display_value {
+	background-color : #fafafa;
+	text-align: center;
+	font-family: verdana;
+    font-size: 16px;
+}
+
+.display_value_edit_box {
+	display: table-cell;
+	width: 178px;
+	height: 100px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.display_edit_value {
+	margin-top: 5px;
+	text-align: center;
+	font-family: verdana;
+    font-size: 16px;
+	font-style: italic;
+}
+
+.bad_value{	
+	color: #ff0000;
+}
+
+.send_value {
+	margin-top: 5px;
+	width: 70px;
+	height: 25px;
+	font-family: verdana;
+	font-size: 16px;
+	font-style: italic;
+}
+
+.sel_on {
+	background-image: url(../img/ssright_wn.png);
+}
+
+.sel_off {
+	background-image: url(../img/ssleft_wn.png);
+}
+
+.sel_on_blank {
+	background-image: url(../img/ssright_blank.png);
+}
+
+.sel_off_blank {
+	background-image: url(../img/ssleft_blank.png);
+}
+
+.led_black {
+	background-image: url(../img/label_light_black.png);
+}
+
+.led_red {
+	background-image: url(../img/label_light_red.png);
+}
+
+.led_green {
+	background-image: url(../img/label_light_green.png);
+}
+
+.led_blue {
+	background-image: url(../img/label_light_blue.png);
+}
+.led_yellow{
+	background-image: url(../img/label_light_yellow.png);
+}
+.button_red {
+	background-image: url(../img/label_button_red.png);
+}
+
+.button_green {
+	background-image: url(../img/label_button_green.png);
+}
+
+.button_blue {
+	background-image: url(../img/label_button_blue.png);
+}
+
+.conn_red {
+	background-image: url(../img/conn_red.png);
+}
+
+.conn_green {
+	background-image: url(../img/conn_green.png);
+}
+
+.offline {
+	background-image: url(../img/offline.png);
+	animation: blinker 1.5s ease infinite;
+}
+
+.online {
+	background-image: url(../img/online.png);
+	animation: rotate 5s linear infinite;
+}
+
+@keyframes blinker {  
+  0%	{opacity: 0.0;}
+  50% 	{opacity: 1;}
+  100%	{opacity: 0.0;}
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}

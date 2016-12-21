@@ -25,12 +25,21 @@
 	<script>var CANV_GAUGE_FONTS_PATH = 'fonts'</script>
 	<script src="js/gauge.js"></script>
 	
+	
+	<script>
+		function change(i){
+			var el=document.getElementById(i);
+			if(el.style.backgroundImage=="url(../img/Valve_Close.png)")
+				el.style.backgroundImage="url('../img/Valve_Open.png')";
+			else
+				el.style.backgroundImage="url('../img/Valve_Close.png')";
+		}
+	</script>
+	
 </head>
-<body>
+<body background=img/sfondoNavicella.png >
 
-<image
-
-
+<button type="button" id=valve-1 class=valve onclick="change('valve-1')"; ></button>
 
 </body>
 </html>

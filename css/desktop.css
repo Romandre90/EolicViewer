@@ -1,6 +1,21 @@
 body{
 	background-size: 800px 600px;
 	background-repeat: no-repeat;
-	background-position:
-	
+}
+
+.valve{
+	width: 70px;
+	height: 65px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border:none;
+}
+
+
+
+#valve-1 {
+	margin-left:170px;
+	margin-top:15px;
+	backgroundImage: url('../img/Valve_Close.png');
+	background-size: 69px 64px;
 }

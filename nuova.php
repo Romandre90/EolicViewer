@@ -89,6 +89,8 @@ if (isset($_SESSION['last_act']) && (time() - $_SESSION['last_act'] > $_CONFIG['
 		<input type="text" class="display_value" id="engine_t3" readonly >
 		<input type="text" class="display_value" id="engine_prod" readonly >
 		<input type="text" class="display_value" id="wind-speed" readonly >
+		
+		<button type="button" id="distr_lvl" class="led" ></button>
 	</div>
 
 </body>

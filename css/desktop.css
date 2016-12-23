@@ -1,6 +1,7 @@
 button{
 	border: none;
 }
+
 #plant{
 	background-image:url('../img/sfondoNavicella.png');
 	background-position: center;  
@@ -12,13 +13,53 @@ button{
 
 .valve{
 	position:absolute;
-	width: 71px;
-	height: 66px;
+	width: 72px;
+	height: 67px;
 	background-color: transparent;
 	background-repeat: no-repeat;
 	background-image: url('../img/Valve_Close.png');
-	background-size: 69px 64px;
+	background-size: 70px 66px;
 }
+
+.led_alarm{
+	position:absolute;
+	width: 20px;
+	height: 20px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-image: url('../img/rled_off.png');
+	background-size: 20px 20px;
+}
+
+.led_working{
+	position:absolute;
+	width: 20px;
+	height: 20px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-image: url('../img/gled_off.png');
+	background-size: 20px 20px;
+}
+
+.semaphore{
+	position:absolute;
+	width: 20px;
+	height: 20px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-image: url('../icon/light_blue.png');
+	background-size: 20px 20px;
+}
+
+.arrow{
+	position:absolute;
+	width: 25px;
+	height: 25px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: 25px 25px;
+}
+
 
 #valve_1 {
 	
@@ -54,10 +95,10 @@ button{
 	background-color: transparent;
 	background-repeat: no-repeat;
 	position:absolute;
-	margin-left:191px;
-	margin-top:221px;
+	margin-left:194px;
+	margin-top:226px;
 	background-image: url('../img/Brake_Open.png');
-	background-size: 20px 66px;
+	background-size: 18px 59px;
 }
 
 #spinholder{
@@ -66,10 +107,10 @@ button{
 	background-color: transparent;
 	background-repeat: no-repeat;
 	position:absolute;
-	margin-left:564px;
-	margin-top:408px;
+	margin-left:565px;
+	margin-top:410px;
 	background-image: url('../img/Spinholder_Open.png');
-	background-size: 66px 110px;
+	background-size: 66px 109px;
 }
 
 #flap_position{
@@ -78,8 +119,8 @@ button{
 	background-color: transparent;
 	background-repeat: no-repeat;
 	position:absolute;
-	margin-left:0px;
-	margin-top:2px;
+	margin-left:-5px;
+	margin-top:1px;
 	background-image: url('../img/Flap_Open.png');
 	background-size: 66px 510px;
 }
@@ -95,7 +136,7 @@ button{
 
 #cuscinetto_t2{
 	position:absolute;
-	margin-left:278px;
+	margin-left:279px;
 	margin-top: 213px;
 	font-size: 12px;
 	width: 33px;
@@ -106,9 +147,6 @@ button{
 	position:absolute;
 	margin-left:700px;
 	margin-top: 150px;
-	font-size: 12px;
-	width: 33px;
-	height: 20px;
 }
 
 #distr_t{
@@ -123,16 +161,13 @@ button{
 #ridut_lvl{
 	position:absolute;
 	margin-left:340px;
-	margin-top: 235px;
-	font-size: 12px;
-	width: 33px;
-	height: 20px;
+	margin-top: 265px;
 }
 
 #ridut_t{
 	position:absolute;
 	margin-left:340px;
-	margin-top: 265px;
+	margin-top: 235px;
 	font-size: 12px;
 	width: 33px;
 	height: 20px;
@@ -200,3 +235,61 @@ button{
 	width: 60px;
 	height: 25px;
 }
+
+#freno_FC_A{
+	position:absolute;
+	margin-left:210px;
+	margin-top: 180px;
+}
+
+#freno_FC_C{
+	position:absolute;
+	margin-left:210px;
+	margin-top: 205px;
+}
+
+#contadenti_1{
+	position:absolute;
+	margin-left:213px;
+	margin-top: 520px;
+}
+
+#contadenti_2{
+	position:absolute;
+	margin-left:250px;
+	margin-top: 520px;
+}
+
+#sensore_0{
+	position:absolute;
+	margin-left:70px;
+	margin-top: 520px;
+}
+
+#spin_motor_status{
+	position:absolute;
+	margin-left:488px;
+	margin-top: 545px;
+}
+
+#engine_status{
+	position:absolute;
+	margin-left:100px;
+	margin-top: 350px;
+	
+}
+
+#spin_dx{
+	position:absolute;
+	margin-left:519px;
+	margin-top: 568px;
+	background-image: url('../img/spin_dx_off.png');
+}
+
+#spin_sx{
+	position:absolute;
+	margin-left:488px;
+	margin-top: 568px;
+	background-image: url('../img/spin_sx_off.png');
+}
+

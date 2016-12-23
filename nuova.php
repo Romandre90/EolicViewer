@@ -61,9 +61,13 @@ if (isset($_SESSION['last_act']) && (time() - $_SESSION['last_act'] > $_CONFIG['
 			</div>
 		</span>
 		<span>
-			<a href="impianto.php">Pagina Impianto</a>
-			<a href="logout.php">Logout</a>
+			
 		</span>
+	</div>
+	
+	<div class=nav >
+		<a href="impianto.php">Pagina Impianto</a>
+		<a href="logout.php">Logout</a>
 	</div>
 	
 	<div class=section id=plant >
@@ -76,11 +80,9 @@ if (isset($_SESSION['last_act']) && (time() - $_SESSION['last_act'] > $_CONFIG['
 		<button type="button" id="spinholder" ></button>
 		<button type="button" id="flap_position" ></button>
 		
-		<input type="text" class="display_value" id="cuscinetto_t1" >
+		<input type="text" class="display_value" id="cuscinetto_t1" readonly >
 		<input type="text" class="display_value" id="cuscinetto_t2" readonly >
-		<input type="text" class="display_value" id="distr_lvl" readonly >
 		<input type="text" class="display_value" id="distr_t" readonly >
-		<input type="text" class="display_value" id="ridut_lvl" readonly >
 		<input type="text" class="display_value" id="ridut_t" readonly >
 		<input type="text" class="display_value" id="ridut_giri" readonly >
 		<input type="text" class="display_value" id="navicella_t" readonly >
@@ -90,7 +92,20 @@ if (isset($_SESSION['last_act']) && (time() - $_SESSION['last_act'] > $_CONFIG['
 		<input type="text" class="display_value" id="engine_prod" readonly >
 		<input type="text" class="display_value" id="wind-speed" readonly >
 		
-		<button type="button" id="distr_lvl" class="led" ></button>
+		<button type="button" id="distr_lvl" class="led_alarm" ></button>
+		<button type="button" id="ridut_lvl" class="led_alarm" ></button>
+		<button type="button" id="freno_FC_A" class="led_working" ></button>
+		<button type="button" id="freno_FC_C" class="led_working" ></button>
+		<button type="button" id="contadenti_1" class="led_working" ></button>
+		<button type="button" id="contadenti_2" class="led_working" ></button>
+		<button type="button" id="sensore_0" class="led_working" ></button>
+		
+		<button type="button" id="spin_motor_status" class="semaphore" ></button>
+		<button type="button" id="engine_status" class="semaphore" ></button>
+		
+		<button type="button" id="spin_dx" class="arrow" ></button>
+		<button type="button" id="spin_sx" class="arrow" ></button>
+		
 	</div>
 
 </body>

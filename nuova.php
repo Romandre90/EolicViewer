@@ -4,13 +4,6 @@ include_once("config.php");
 
 //controllo se la sessione è attiva
 
-if (!(isset($_SESSION['auth']) && $_SESSION['auth'] == AUTH_LOGGED)) {
-	$_SESSION['auth'] = AUTH_NOT_LOGGED;
-	echo '<script language=javascript>document.location.href="notifica.php"</script>'; 
-} else {
-	
-	$cod = $_SESSION['cod']; 
-}
 // timeout sessione
 
 /* SCOMMENTARE PER ABILITARE LA FUNZIONE TIMEOUT - LE INTERAZIONI CON JAVASCRIPT NON VALGONO A PROLUNGARE LA SESSIONE 
@@ -21,9 +14,6 @@ if (isset($_SESSION['last_act']) && (time() - $_SESSION['last_act'] > $_CONFIG['
 */
 // $_SESSION['last_act'] = time(); // aggiornamento timestamp act
 
-if ( $_SESSION['ip_addr'] == NULL ){
-	echo '<script language=javascript>document.location.href="mainpage.php"</script>';
-}
 ?>
 
 <!DOCTYPE html>
@@ -33,14 +23,21 @@ if ( $_SESSION['ip_addr'] == NULL ){
 	<title><?php echo $_CONFIG['site_name'] ?> - Comandi Manuali</title>
 	<link href="/css/basic.css" rel="stylesheet" type="text/css">
 	<link href="/css/desktop.css" rel="stylesheet" type="text/css">
-	<script type="text/javascript" src="js/jquery-3.1.0.js"></script>	<!-- LIBRERIA JAVASCRIPT -->
-	<script type="text/javascript" src="js/writingfunc.js"></script>	<!-- FILE JS PER SCRITTURE -->
-	<script type="text/javascript" src="js/mancmd_refresh.js"></script> <!-- FILE JS PER AGGIORNAMENTO LETTURA -->
+	
+	<script>
+		function change(i){
+			var el=document.getElementById(i);
+			if(el.style.backgroundImage=="url(../img/Valve_Close.png)")
+				el.style.backgroundImage="url('../img/Valve_Open.png')";
+			else
+				el.style.backgroundImage="url('../img/Valve_Close.png')";
+		}
+	</script>
 	
 </head>
-<body background=img/sfondoNavicella.png onload="checkConnection(); refreshData(); setInterval(checkConnection,10000); setInterval(refreshData,2000);">
-
-<button type="button" id=valve-1 class=valve onclick="change('valve-1')"; ></button>
+<body>
+	
+	
 	
 	<div class="header">
 		<div class="logo">
@@ -48,17 +45,17 @@ if ( $_SESSION['ip_addr'] == NULL ){
 		</div>
 		<div class="title_container">
 			<h1><?php echo $_CONFIG['site_name'] ?></h1>
-			<h2>nuova - <?php echo $_SESSION['ip_addr']?> - <?php echo $_SESSION['plant_name']?></h2>
+			<h2>nuova - <?php echo "37.99.209.123:502"?> - <?php echo "pala 5"?></h2>
 		</div>
 		<span style="float:right">
 			<div class="conn_icon">
 				<img src="/img/pc.png" width="92" height="92">
 			</div>
-			<div id="client_server" class="conn_icon offline"></div>		
+			<div id="client_server" class="conn_icon online"></div>		
 			<div class="conn_icon">
 				<img src="/img/web_server.png" width="92" height="92">
 			</div>
-			<div id="server_plc" class="conn_icon offline"></div>	
+			<div id="server_plc" class="conn_icon online"></div>	
 			<div class="conn_icon">
 				<img src="/img/plc.png" width="92" height="92">
 			</div>
@@ -69,7 +66,32 @@ if ( $_SESSION['ip_addr'] == NULL ){
 		</span>
 	</div>
 	
-			
->
+	<div class=section id=plant >
+		<button type="button" id="valve_1" class="valve" ></button>
+		<button type="button" id="valve_2" class="valve" ></button>
+		<button type="button" id="valve_3" class="valve" ></button>
+		<button type="button" id="valve_4" class="valve" ></button>
+		<button type="button" id="valve_5" class="valve" ></button>
+		<button type="button" id="freno" ></button>
+		<button type="button" id="spinholder" ></button>
+		<button type="button" id="flap_position" ></button>
+		
+		<input type="text" class="display_value" id="cuscinetto_t1" >
+		<input type="text" class="display_value" id="cuscinetto_t2" readonly >
+		<input type="text" class="display_value" id="distr_lvl" readonly >
+		<input type="text" class="display_value" id="distr_t" readonly >
+		<input type="text" class="display_value" id="ridut_lvl" readonly >
+		<input type="text" class="display_value" id="ridut_t" readonly >
+		<input type="text" class="display_value" id="ridut_giri" readonly >
+		<input type="text" class="display_value" id="navicella_t" readonly >
+		<input type="text" class="display_value" id="engine_t1" readonly >
+		<input type="text" class="display_value" id="engine_t2" readonly >
+		<input type="text" class="display_value" id="engine_t3" readonly >
+		<input type="text" class="display_value" id="engine_prod" readonly >
+		<input type="text" class="display_value" id="wind-speed" readonly >
+		
+		<button type="button" id="distr_lvl" class="led" ></button>
+	</div>
+
 </body>
 </html>

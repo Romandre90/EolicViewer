@@ -1,21 +1,202 @@
-body{
+button{
+	border: none;
+}
+#plant{
+	background-image:url('../img/sfondoNavicella.png');
+	background-position: center;  
 	background-size: 800px 600px;
 	background-repeat: no-repeat;
+	width: 800px;
+	height: 600px;
 }
 
 .valve{
-	width: 70px;
-	height: 65px;
+	position:absolute;
+	width: 71px;
+	height: 66px;
 	background-color: transparent;
 	background-repeat: no-repeat;
-	border:none;
+	background-image: url('../img/Valve_Close.png');
+	background-size: 69px 64px;
 }
 
+#valve_1 {
+	
+	margin-left:177px;
+	margin-top:22px;
+	
+}
 
+#valve_2 {
+	margin-left:280px;
+	margin-top:92px;
+}
 
-#valve-1 {
-	margin-left:170px;
-	margin-top:15px;
-	backgroundImage: url('../img/Valve_Close.png');
-	background-size: 69px 64px;
+#valve_3 {
+	margin-left:434px;
+	margin-top:47px;
+}
+
+#valve_4 {
+	margin-left:434px;
+	margin-top:115px;
+
+}
+
+#valve_5 {
+	margin-left:521px;
+	margin-top:290px;
+}
+
+#freno{
+	width: 23px;
+	height: 70px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	position:absolute;
+	margin-left:191px;
+	margin-top:221px;
+	background-image: url('../img/Brake_Open.png');
+	background-size: 20px 66px;
+}
+
+#spinholder{
+	width: 67px;
+	height: 112px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	position:absolute;
+	margin-left:564px;
+	margin-top:408px;
+	background-image: url('../img/Spinholder_Open.png');
+	background-size: 66px 110px;
+}
+
+#flap_position{
+	width: 67px;
+	height: 510px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	position:absolute;
+	margin-left:0px;
+	margin-top:2px;
+	background-image: url('../img/Flap_Open.png');
+	background-size: 66px 510px;
+}
+
+#cuscinetto_t1{
+	position:absolute;
+	margin-left:75px;
+	margin-top: 213px;
+	font-size: 12px;
+	width: 33px;
+	height: 20px;
+}
+
+#cuscinetto_t2{
+	position:absolute;
+	margin-left:278px;
+	margin-top: 213px;
+	font-size: 12px;
+	width: 33px;
+	height: 20px;
+}
+
+#distr_lvl{
+	position:absolute;
+	margin-left:700px;
+	margin-top: 150px;
+	font-size: 12px;
+	width: 33px;
+	height: 20px;
+}
+
+#distr_t{
+	position:absolute;
+	margin-left:586px;
+	margin-top: 150px;
+	font-size: 12px;
+	width: 33px;
+	height: 20px;
+}
+
+#ridut_lvl{
+	position:absolute;
+	margin-left:340px;
+	margin-top: 235px;
+	font-size: 12px;
+	width: 33px;
+	height: 20px;
+}
+
+#ridut_t{
+	position:absolute;
+	margin-left:340px;
+	margin-top: 265px;
+	font-size: 12px;
+	width: 33px;
+	height: 20px;
+}
+
+#ridut_giri{
+	position:absolute;
+	margin-left:340px;
+	margin-top: 200px;
+	font-size: 20px;
+	width: 60px;
+	height: 25px;
+}
+
+#navicella_t{
+	position:absolute;
+	margin-left:600px;
+	margin-top: 10px;
+	font-size: 20px;
+	width: 60px;
+	height: 25px;
+}
+
+#engine_t1{
+	position:absolute;
+	margin-left:120px;
+	margin-top: 400px;
+	font-size: 12px;
+	width: 33px;
+	height: 20px;
+}
+
+#engine_t2{
+	position:absolute;
+	margin-left:175px;
+	margin-top: 400px;
+	font-size: 12px;
+	width: 33px;
+	height: 20px;
+}
+
+#engine_t3{
+	position:absolute;
+	margin-left:230px;
+	margin-top: 400px;
+	font-size: 12px;
+	width: 33px;
+	height: 20px;
+}
+
+#engine_prod{
+	position:absolute;
+	margin-left:193px;
+	margin-top: 350px;
+	font-size: 20px;
+	width: 70px;
+	height: 25px;
+}
+
+#wind-speed{
+	position:absolute;
+	margin-left:600px;
+	margin-top: 50px;
+	font-size: 20px;
+	width: 60px;
+	height: 25px;
 }

@@ -17,29 +17,11 @@ $Modbus=new ModbusMaster("37.99.209.123", "TCP", 10, false);
 //echo "<br>Read inputs: ".$Modbus->Status."<br>"; //Scommentare per debug
 
 	$input = $Modbus->ReadMultipleRegisters(1, $AnalogAr, 4);
+	$a=$Modbus->RxWORD($input, 0)*1;
+	echo "tipo var: " . var_dump($a) . "# ";
+	//echo "vento int: " . (int)$a . "# ";
+
 	echo "vento: " . $Modbus->RxREAL($input, 0)*1 ." / ";
-	usleep(500000);
-	$input = $Modbus->ReadMultipleRegisters(1, $AnalogAr, 4);
-	echo "vento: " . $Modbus->RxREAL($input, 0)*1 ." / ";
-	usleep(500000);
-	$input = $Modbus->ReadMultipleRegisters(1, $AnalogAr, 4);
-	echo "vento: " . $Modbus->RxREAL($input, 0)*1 ." / ";
-	usleep(500000);
-	$input = $Modbus->ReadMultipleRegisters(1, $AnalogAr, 4);
-	echo "vento: " . $Modbus->RxREAL($input, 0)*1 ." / ";
-	usleep(500000);
-	$input = $Modbus->ReadMultipleRegisters(1, $AnalogAr, 4);
-	echo "vento: " . $Modbus->RxREAL($input, 0)*1 ." / ";
-	usleep(500000);
-	$input = $Modbus->ReadMultipleRegisters(1, $AnalogAr, 4);
-	echo "vento: " . $Modbus->RxREAL($input, 0)*1 ." / ";
-	usleep(500000);
-	$input = $Modbus->ReadMultipleRegisters(1, $AnalogAr, 4);
-	echo "vento: " . $Modbus->RxREAL($input, 0)*1 ." / ";
-	usleep(500000);
-	$input = $Modbus->ReadMultipleRegisters(1, $AnalogAr, 4);
-	echo "vento: " . $Modbus->RxREAL($input, 0)*1 ." / ";
-	usleep(500000);
 ?>
 
 	

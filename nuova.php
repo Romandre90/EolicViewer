@@ -23,20 +23,14 @@ if (isset($_SESSION['last_act']) && (time() - $_SESSION['last_act'] > $_CONFIG['
 	<title><?php echo $_CONFIG['site_name'] ?> - Comandi Manuali</title>
 	<link href="/css/basic.css" rel="stylesheet" type="text/css">
 	<link href="/css/desktop.css" rel="stylesheet" type="text/css">
-	
-	<script>
-		function change(i){
-			var el=document.getElementById(i);
-			if(el.style.backgroundImage=="url(../img/Valve_Close.png)")
-				el.style.backgroundImage="url('../img/Valve_Open.png')";
-			else
-				el.style.backgroundImage="url('../img/Valve_Close.png')";
-		}
-	</script>
-	
+	<script type="text/javascript" src="js/jquery-3.1.0.js"></script>	<!-- LIBRERIA JAVASCRIPT -->
+	<script type="text/javascript" src="js/writingfunc.js"></script>	<!-- FILE JS PER SCRITTURA -->
+	<script type="text/javascript" src="js/get_data.js"></script>		
 </head>
 <body>
-	
+	<script>
+		var refresh = setInterval(getData, 1000); //setto l'intervallo di aggiornamento dei dati
+	</script>
 	
 	
 	<div class="header">
@@ -68,6 +62,7 @@ if (isset($_SESSION['last_act']) && (time() - $_SESSION['last_act'] > $_CONFIG['
 	<div class=nav >
 		<a href="impianto.php">Pagina Impianto</a>
 		<a href="logout.php">Logout</a>
+		<p id="demo"></p>
 	</div>
 	
 	<div class=section id=plant >

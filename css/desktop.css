@@ -177,8 +177,8 @@ button{
 	position:absolute;
 	margin-left:340px;
 	margin-top: 200px;
-	font-size: 20px;
-	width: 60px;
+	font-size: 18px;
+	width: 150px;
 	height: 25px;
 }
 
@@ -186,9 +186,9 @@ button{
 	position:absolute;
 	margin-left:600px;
 	margin-top: 10px;
-	font-size: 20px;
-	width: 60px;
-	height: 25px;
+	font-size: 12px;
+	width: 33px;
+	height: 20px;
 }
 
 #engine_t1{
@@ -222,8 +222,8 @@ button{
 	position:absolute;
 	margin-left:193px;
 	margin-top: 350px;
-	font-size: 20px;
-	width: 70px;
+	font-size: 18px;
+	width: 90px;
 	height: 25px;
 }
 
@@ -231,8 +231,8 @@ button{
 	position:absolute;
 	margin-left:600px;
 	margin-top: 50px;
-	font-size: 20px;
-	width: 60px;
+	font-size: 18px;
+	width: 150px;
 	height: 25px;
 }
 

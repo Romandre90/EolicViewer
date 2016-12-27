@@ -6,14 +6,6 @@ include_once("config.php");
 
 // timeout sessione
 
-/* SCOMMENTARE PER ABILITARE LA FUNZIONE TIMEOUT - LE INTERAZIONI CON JAVASCRIPT NON VALGONO A PROLUNGARE LA SESSIONE 
-if (isset($_SESSION['last_act']) && (time() - $_SESSION['last_act'] > $_CONFIG['expire'])) {
-    $_SESSION['auth'] = AUTH_EXPIRED;
-	echo '<script language=javascript>document.location.href="notifica.php"</script>';
-}
-*/
-// $_SESSION['last_act'] = time(); // aggiornamento timestamp act
-
 ?>
 
 <!DOCTYPE html>

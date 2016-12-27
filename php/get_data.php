@@ -22,11 +22,13 @@ header('content-type: application/json');
 
 $Modbus=new ModbusMaster("37.99.209.123", "TCP", 10, false);
 
-foreach($reg_list as $reg){	//lettura dati dai registri
-	$input = $Modbus->ReadMultipleRegisters(1, $reg, 4);
-	$Values[$reg] = $Modbus->RxREAL($input, 0)*1 ;
+foreach($reg_list as $reg){				//lettura dati dai registri questo for scorre i registri
+	$input = $Modbus->ReadMultipleRegisters(1, $reg, 4); // legge il valore dal registro
+	$Values[$reg] = $Modbus->RxREAL($input, 0)*1 ;	// salva il valore nel vettore indicizzato sui registri
 }
-	
+
+
+
 echo json_encode($Values);		// trasmissione del dato alla pagina get_data.js
 ?>
 
